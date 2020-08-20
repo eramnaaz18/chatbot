@@ -1,0 +1,66 @@
+import pyttsx3
+import os
+
+pyttsx3.speak("Hello Welcome to Chatbot")
+print("Hello! Welcome to Chatbot!")
+pyttsx3.speak("I have a great range of tools to serve you with")
+print("I have a great range of tools to serve you with!!!")
+while True:
+	pyttsx3.speak("Please type your requirement so that I can help you")
+	print("Please type your requirement so that I can help you: ", end='')
+	p = input()
+	
+	# print(p)
+	# os.system(p)
+	if (("run" in p) or ("open" in p))  and ("chrome" in p) :
+	  pyttsx3.speak("Opening Chrome for you")
+	  os.system("start chrome")
+
+       
+	elif (("run" in p) or  ("execute" in p ) or  ("open" in p )) and  (("notepad" in p) or ("editor" in p) ) :
+	  pyttsx3.speak("Opening Notepad for you")
+	  os.system("start notepad")
+
+	elif (("run" in p) or ("open" in p))  and  ("yahoo" in p) :
+	  pyttsx3.speak("Opening Yahoo.com for you")
+	  os.system("start chrome yahoo.com")
+
+	elif (("tell" in p) or ("take" in p))  and  (("news" in p) or ("headlines" in p))  :
+	  pyttsx3.speak("Showing you the headlines for today")
+	  os.system("start chrome telegraphindia.com/india")
+
+	elif (("do" in p) or ("perform" in p))  and  ("calculation" in p)  :
+	  pyttsx3.speak("Opening calculator for you")
+	  os.system("calc")
+
+	elif ("send" in p) and ("mail" in p) :
+	  pyttsx3.speak("Opening gmail.com for you")
+	  os.system("start chrome gmail.com")
+
+	elif("take" in p)  and  (("latest" in p) and ("apps" in p))  :
+	  pyttsx3.speak("Taking you to microsoft store")
+	  os.system("start ms-windows-store:")
+
+	elif("open" in p) and ("camera" in p)  :
+	  pyttsx3.speak("Opening Camera for you")
+	  os.system("start microsoft.windows.camera:")
+
+	elif("set" in p) and ("alarm" in p)  :
+	  pyttsx3.speak("Opening Alarm and Clocks for you")
+	  os.system("start ms-clock:")
+
+	elif("show" in p) and ("weather" in p)  :
+	  pyttsx3.speak("Showing you today's weather")
+	  os.system("start bingweather:")
+	
+	elif ("play" in p)  and ("song" in p):
+	  pyttsx3.speak("Opening Spotify for you")
+	  os.system("start spotify")
+	
+	elif  ("exit" in p)  or ("quit" in p):
+	  pyttsx3.speak("Thank you for using the Chatbot! Have a great day!")
+	  break
+
+	else:
+	  pyttsx3.speak("Sorry!That tool is not supported by me")
+	  print("dont support")
